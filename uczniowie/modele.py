@@ -13,15 +13,25 @@ class BazaModel(Model):
     class Meta:
         database = baza
 
+class Klasa(BazaModel):
+    klasa = CharField(null=False)
+    rok_naboru = CharField(default=0)
+    rok_matury = CharField(default=0)
+
+
 
 class Uczen(BazaModel):
-    pass
+    imie = CharField(null=False)
+    nazwisko = CharField(null=False)
+    plec = IntegerField()
+    klasa = ForeignKeyField(Klasa, related_name='uczniowie')
 
 
-class Klasa(BazaModel):
-    pass
 
-
+def main(args):
+    baza.connect()  # połączenie z bazą
+    baza.create_tables([Klasa, Uczen])  # tworzymy tabele
+    
 if __name__ == '__main__':
     import sys
     sys.exit(main(sys.argv))

@@ -40,3 +40,24 @@ Uruchomienie serwera deweloperskiego:
 ```python
 python app.py
 ```
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url_for('lista_ucz') }}">Lista uczniów</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url_for('edytuj_ucz') }}">Edytuj uczniów</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url_for('dodaj_ucz') }}">Dodaj uczniów</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url_for('lista_kl') }}">Lista klas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url_for('edytuj_kl') }}">Edytuj klasy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ url_for('dodaj_kl') }}">Dodaj klasy</a>
+            </li>            
+          </ul>
