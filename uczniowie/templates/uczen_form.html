@@ -2,12 +2,14 @@
         <div class="form-group">
         {{ form.csrf_token }}
     
-        {{ form.pytanie.label }}<br>
-        {{ form.pytanie(class_="form-control") }}<br>
-        {{ form.kategoria.label }}<br>
-        {{ form.kategoria(class_="form-control") }}<br>
+        {{ form.imie.label }}<br>
+        {{ form.imie(class_="form-control") }}<br>
+        {{ form.nazwisko.label }}<br>
+        {{ form.nazwisko(class_="form-control") }}<br>
+        {{ form.plec.label }}<br>
+        {{ form.plec(class_="form-control") }}<br>
         
-    <label>Podaj odpowiedzi i zaznacz poprawną</label><br>
+
     <ol>
     {% for o in form.odpowiedzi %}
         <li>{{ o }}</li>

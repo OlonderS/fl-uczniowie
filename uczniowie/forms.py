@@ -23,3 +23,5 @@ class DodajForm(FlaskForm):
                             validators=[Required(message=blad1)])
     rok_naboru = StringField('Rok naboru:',
                             validators=[Required(message=blad1)])
+                            
+
